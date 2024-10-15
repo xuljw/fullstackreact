@@ -1,13 +1,9 @@
-const initialState = {
-  good: 0,
-  ok: 0,
-  bad: 0
-}
-
+import initialState from './const'
 const counterReducer = (state = initialState, action) => {
   console.log(action)
   switch (action.type) {
     case 'GOOD':
+      console.log(state);
       return {
         ...state,
         good: state.good + 1

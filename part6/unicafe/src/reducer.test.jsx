@@ -1,6 +1,7 @@
 import deepFreeze from 'deep-freeze'
 import counterReducer from './reducer'
 
+import { expect, test, describe } from 'vitest'
 describe('unicafe reducer', () => {
   const initialState = {
     good: 0,

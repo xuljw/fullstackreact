@@ -6,8 +6,9 @@ const app = require('../app')
 const api = supertest(app)
 const Blog = require('../models/blog')
 const User = require('../models/user')
-
+const config = require('../utils/config')
 beforeEach(async () => {  
+  mongoose.connect(config.MONGODB_URI)
   await User.deleteMany({})
 
   const passwordHash = await bcrypt.hash("kakakaka", 10)
